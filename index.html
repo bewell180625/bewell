@@ -164,7 +164,7 @@
     }
     .promo-card {
       aspect-ratio: 2 / 3;
-      max-width: 380px;
+      max-width: 480px;
       margin: 0 auto;
     }
     .promo-card img {
@@ -240,8 +240,8 @@
         padding: 20px 10px;
       }
       .cards-servicios .card {
-        max-width: 350px;
-        aspect-ratio: 1 / 0.9;
+        max-width: 320px;
+        aspect-ratio: 1 / 0.80;
       }
       .cards-servicios .card-back {
         font-size: 1em;
@@ -333,114 +333,76 @@
     </div>
   </section>
 
-  <main>
-    <!-- Servicios -->
-    <section id="servicios">
-      <h2 class="titulo-contenedor">Servicios</h2>
-      <div class="cards-servicios">
-        <!-- Card 1 -->
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="masaje.jpg" alt="Masaje de relajación">
-              <button>Masaje de relajación</button>
-            </div>
-            <div class="card-back">
-              <p>Ven y disfruta de la mejor experiencia relajante, donde reduciras el estres y tensión muscular, disminuyendo el dolor e inflamación, dando al cuerpo y a la mente un estado de bienestar y relajación.</p>
-            </div>
-          </div>
-        </div>
+  <!-- Servicios -->
+  <section id="servicios">
+    <h2 class="titulo-contenedor">Servicios</h2>
+    <div class="cards-servicios">
+      <!-- Cards (4) -->
+      <div class="card"><div class="card-inner"><div class="card-front"><img src="masaje.jpg"><button>Masaje de relajación</button></div><div class="card-back"><p>Ven y disfruta...</p></div></div></div>
+      <div class="card"><div class="card-inner"><div class="card-front"><img src="facial.jpg"><button>Tratamientos corporales</button></div><div class="card-back"><p>Contamos con las mejores técnicas...</p></div></div></div>
+      <div class="card"><div class="card-inner"><div class="card-front"><img src="limpieza.jpg"><button>Tratamientos faciales</button></div><div class="card-back"><p>En Bewell spa...</p></div></div></div>
+      <div class="card"><div class="card-inner"><div class="card-front"><img src="aromaterapia.jpg"><button>Armonización oro facial</button></div><div class="card-back"><p>Con los mejores productos...</p><ul><li>Botox</li><li>Rellenos</li><li>Hilos tensores</li><li>Bioestimuladores</li></ul></div></div></div>
+    </div>
+  </section>
 
-        <!-- Card 2 -->
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="facial.jpg" alt="Tratamientos corporales">
-              <button>Tratamientos corporales</button>
-            </div>
-            <div class="card-back">
-              <p>Contamos con las mejores tecnicas de reducción, tonificación y moldeamiento corporal, donde despues de conocer nuestros tratamientos, tu cuerpo lo agradecera.</p>
-            </div>
-          </div>
-        </div>
+  <!-- Promociones -->
+  <section id="promociones">
+    <h2 class="titulo-contenedor">Promociones</h2>
+    <div class="cards-servicios">
+      <div class="card promo-card"><div class="card-inner"><div class="card-front"><img src="promo_dia_spa.jpg"></div></div></div>
+      <div class="card promo-card"><div class="card-inner"><div class="card-front"><img src="promo_facial.jpg"></div></div></div>
+    </div>
+  </section>
 
-        <!-- Card 3 -->
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="limpieza.jpg" alt="Tratamientos faciales">
-              <button>Tratamientos faciales</button>
-            </div>
-            <div class="card-back">
-              <p>En Bewell spa contamos con las mejores y avanzadas tecnicas para limpieza facial, tratamientos de acne, peling quimico. Donde disfrutaras de una sensación de bienestar y apariencia para tu piel.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="aromaterapia.jpg" alt="Armonización oro facial">
-              <button>Armonización oro facial</button>
-            </div>
-            <div class="card-back">
-              <p>Con los mejores productos de Colombia para México:</p>
-              <ul>
-                <li>Botox</li>
-                <li>Rellenos faciales</li>
-                <li>Hilos tensores</li>
-                <li>Bioestimuladores</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2 class="titulo-contenedor">Contáctanos</h2>
+    <div class="grid-contacto">
+      <div class="formulario">
+        <form id="formulario-contacto" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="957a693e-d678-4412-9c1e-fef570d70dc6">
+          <label>Nombre:</label><input type="text" name="name" required>
+          <label>Correo:</label><input type="email" name="email" required>
+          <label>Mensaje:</label><textarea name="message" required></textarea>
+          <button type="submit">Enviar</button>
+          <div id="mensaje-exito" style="display:none;text-align:center;color:green;"><p><strong>¡Enviado!</strong></p></div>
+        </form>
       </div>
-    </section>
-
-    <!-- Promociones -->
-    <section id="promociones">
-      <h2 class="titulo-contenedor">Promociones</h2>
-      <div class="cards-servicios">
-        <div class="card promo-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="promo_dia_spa.jpg" alt="Día de Spa">
-            </div>
-          </div>
-        </div>
-        <div class="card promo-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <img src="promo_facial.jpg" alt="Facial 2x1">
-            </div>
-          </div>
-        </div>
+      <div class="ubicacion">
+        <p>Visítanos en nuestra sucursal en plaza San Marcos:</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d469.61621196736934!2d-99.20773250812785!3d19.67300456971306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21f003fd021f3%3A0x9eeb45c6c23f3378!2sbewell!5e0!3m2!1ses!2smx!4v1750367346177!5m2!1ses!2smx" loading="lazy"></iframe>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contacto -->
-    <section id="contacto">
-      <h2 class="titulo-contenedor" style="margin-bottom: 20px;">Contáctanos</h2>
-      <div class="grid-contacto">
-        <div class="formulario">
-          <form id="formulario-contacto" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="957a693e-d678-4412-9c1e-fef570d70dc6">
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-            <label for="name">Nombre:</label>
-            <input type="text" name="name" required>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" name="email" required>
-            <label for="message">Mensaje:</label>
-            <textarea name="message" required></textarea>
-            <button type="submit">Enviar</button>
-            <div id="mensaje-exito" style="display: none; text-align: center; color: green;">
-              <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
-                <path fill="#4CAF50" d="M9 16.2l-3.5-3.5L4 14.2l5 5 12-12-1.5-1.5L9 16.2z"/>
-              </svg>
-              <p><strong>¡Enviado!</strong> Gracias por ponerse en contacto con nosotros.</p>
-            </div>
-          </form>
-        </div>
-        <div class="ubicacion">
-          <p style="margin-top: 10px;">
+  <!-- Footer -->
+  <footer>
+    <div class="redes-sociales">
+      <a href="https://www.facebook.com/@bewellspa.2025" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/spa.bewell" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@be.well30" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+    &copy; 2025 bewell | Todos los derechos reservados
+  </footer>
+
+  <a href="https://wa.me/5215551731036" class="whatsapp-float" target="_blank" title="Enviar mensaje por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script>
+    document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(r => {
+        if (r.ok) {
+          form.style.display = 'none';
+          document.getElementById('mensaje-exito').style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
