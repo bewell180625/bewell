@@ -227,7 +227,7 @@
 }
 .promo-card {
   aspect-ratio: 2 / 3; /* Más altas que anchas */
-  max-width: 350px;    /* Limita su ancho */
+  max-width: 380px;    /* Limita su ancho */
   margin: 0 auto;      /* Centra las tarjetas */
 }
 
@@ -235,6 +235,12 @@
   object-fit: cover; /* Hace que la imagen llene bien el espacio */
   height: 100%;
 }
+@media screen and (max-width: 768px) {
+  .promo-card {
+    aspect-ratio: 2 / 3 !important;  /* Forzar proporción */
+    max-width: 350px !important;
+    width: 100%;                      /* Que ocupen el ancho disponible */
+  }
 
 .ubicacion iframe {
   width: 100%;
@@ -277,7 +283,7 @@ card-front button {
   .cards-servicios .card-back {
     font-size: 0.9em;  /* Aún más pequeño en celulares chicos */
   }
-///////////////
+}
 
 main {
   max-width: 1200px;
