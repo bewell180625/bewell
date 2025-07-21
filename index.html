@@ -290,6 +290,20 @@ card-front button {
   .cards-servicios .card-back {
     font-size: 0.9em;  /* Aún más pequeño en celulares chicos */
   }
+media screen and (max-width: 768px) {
+  .cards-servicios .card-front button {
+    font-size: 1.2em; /* Reduce un poco */
+    padding: 6px 10px;
+  }
+}
+
+/* En pantallas muy pequeñas (celulares chicos) */
+@media screen and (max-width: 480px) {
+  .cards-servicios .card-front button {
+    font-size: 1em; /* Más pequeño */
+    padding: 5px 8px;
+  }
+}
 }
 
 main {
