@@ -35,20 +35,19 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 1.3em;
-      
-     }
- .logo-container {
-   background: #f2e3d0; 
-   text-align: center;
-   padding: 0.2em 0;
- }
- .logo-container img {
-   max-width: 500px;
-   width: 100%;
-   height: auto;
-   border-radius: 30%;
-   display: inline-block;
- } 
+    }
+    .logo-container {
+      background: #f2e3d0; 
+      text-align: center;
+      padding: 0.2em 0;
+    }
+    .logo-container img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      border-radius: 30%;
+      display: inline-block;
+    } 
     .seccion-relajacion {
       margin-top: 0;
       background-image: url('spa-fondo.jpg');
@@ -61,11 +60,9 @@
       color: white;
       position: relative;
     }
-
     .seccion-relajacion h2 {
-    color: white !important;
+      color: white !important;
     }
-
     .seccion-relajacion::before {
       content: "";
       position: absolute;
@@ -73,7 +70,6 @@
       background: rgba(0, 0, 0, 0.3);
       z-index: 1;
     }
-
     .contenido-relajacion {
       position: relative;
       z-index: 2;
@@ -82,322 +78,176 @@
       font-size: 1.3em;
       text-align: center; 
     }
-  .cards-servicios {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  padding: 30px 0;
-}
 
-.card {
-  perspective: 1000px;
-  border-radius: 20px;
-  width: 100%;
-  aspect-ratio: 1 / 0.70; 
-  overflow: hidden;
-}
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  border-radius: 20px;
-  }
-.card-back {
-  background: #f2e3d0;
-  color: #2e4639;
-  transform: rotateY(180deg);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 1.2em;
-  height: 100%;
-  box-sizing: border-box; 
-  overflow-y: auto;
-}
-.card:hover .card-inner,
-.card.flipped .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card-front {
-  background: #f2e3d0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-}
-
-.card-front img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; 
-  border-radius: 20px;
-  flex-grow: 1;
-  background: #f2e3d0;
-
-}
-.card-front button {
-  background: #f2e3d0;
-  border: none;
-  color: #2e4639;
-  font-weight: bold;
-  padding: 8px 12px;
-  width: 100%;
-  cursor: pointer;
-  font-size: 1.5em;
-  width: 100%;
-  border-radius: 0 0 20px 20px;
-}
-
-.card-back {
-  background: #f2e3d0;
-  color: #2e4639;
-  transform: rotateY(180deg);
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 1.5em;
-  height: 100%;
-  overflow-y: auto;
-}
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  font-size: 40px;
-  padding: 15px;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  background-color: #1ebd5a;
-}
-
-#contacto-ubicacion {
-  max-width: 1200px;
-  margin: auto;
-  background: transparent;
-  padding: 40px 20px;
-  border-radius: 10px;
-}
-
-.grid-contacto {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  align-items: start;
-}
-
-.formulario, .ubicacion {
-  width: 100%;
-}
-
-.formulario form {
-  display: grid;
-  gap: 15px;
-}
-
-.promo-card .card-inner {
-  transform: none !important;        /* Sin rotación */
-  transition: none !important;       /* Sin animación */
-}
-.promo-card {
-  aspect-ratio: 2 / 3; /* Más altas que anchas */
-  max-width: 380px;    /* Limita su ancho */
-  margin: 0 auto;      /* Centra las tarjetas */
-}
-
-.promo-card img {
-  object-fit: cover; /* Hace que la imagen llene bien el espacio */
-  height: 100%;
-}
-@media screen and (max-width: 768px) {
-  .promo-card {
-    aspect-ratio: 2 / 3 !important;  /* Forzar proporción */
-    max-width: 350px !important;
-    width: 100%;                      /* Que ocupen el ancho disponible */
-  }
-}
-@media screen and (max-width: 768px) {
-  .cards-servicios .card:not(.promo-card) {
-    aspect-ratio: 1 / .9; /* Más cuadradas (menos altas) */
-    max-width: 90%;        /* No tan anchas */
-    margin: 0 auto;        /* Centrar */
-  }
-}
-
-.ubicacion iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-  border: none;
-  border-radius: 10px;
-}
-
-/* Adaptable a celular */
-@media screen and (max-width: 768px) {
-  .grid-contacto {
-    grid-template-columns: 1fr;
-  }
-}
-card-front button {
-    font-size: 1.1em;
-    white-space: normal; /* 🔹 Permite salto de línea */
-    padding: 0px;
-  }
-.card-back {
-    font-size: 1.1em;
-    padding: 15px;
-  }
-.cards-servicios {
-     grid-template-columns: 1fr; 
-     padding: 20px 10px;
-   }
-.card {
-    aspect-ratio: 1 / 0.8; /* 🔹 Más espacio vertical */
-  }
-.cards-servicios .card {
-  max-width: 400px;      /* Máximo ancho para que no sean enormes */
-  margin: 0 auto;        /* Centra las tarjetas */
-}
-@media screen and (min-width: 1024px) {
-  .cards-servicios {
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    gap: 10px;           /* Espacio entre tarjetas */
-  }
-}
-@media screen and (max-width: 1024px) and (min-width: 769px) {
-  .cards-servicios .card {
-    max-width: 350px;    /* Más compactas */
-  }
-}
-@media screen and (max-width: 768px) {
-  .cards-servicios .card-back {
-    font-size: 1em;   /* Letras más pequeñas en móvil */
-    padding: 10px;    /* Menos padding para que quepa mejor */
-    line-height: 1.3; /* Mejor legibilidad */
-  }
-}
-@media screen and (max-width: 400px) {
-  .cards-servicios .card-back {
-    font-size: 0.9em;  /* Aún más pequeño en celulares chicos */
-  }
-media screen and (max-width: 768px) {
-  .cards-servicios .card-front button {
-    font-size: 1.3em; /* Reduce un poco */
-    padding: 6px 10px;
-  }
-}
-
-/* En pantallas muy pequeñas (celulares chicos) */
-@media screen and (max-width: 480px) {
-  .cards-servicios .card-front button {
-    font-size: 1em; /* Más pequeño */
-    padding: 5px 8px;
-  }
-}
-
-/////////
-
-main {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 15px;
-}
-
-    section:not(.seccion-relajacion) {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-      margin-top: 20px;
-      border-radius: 10px;
-      background: transparent;
-    }
-    h2 {
-      color: white;
-      text-align: center;
-      font-size: 3em; 
-    }
-.titulo-contenedor {
-  color: white;
-  text-align: center;
-  font-size: 2em; 
-  background: #33B8B3;
-  padding: 1px 20px;
-  border-radius: 20px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-.redes-sociales {
-  margin-bottom: 10px;
-}
-
-.redes-sociales a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.redes-sociales a:hover {
-  transform: scale(1.2);
-  color: #f2e3d0;
-}
-
-form label {
-  color: #2e4639;
-  font-weight: bold;
-}
-    .servicio {
-      margin-bottom: 20px;
-    }
-    form {
+    /* Contenedor general de servicios */
+    .cards-servicios {
       display: grid;
-      gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 30px 0;
+      justify-content: center;
     }
-    input, textarea {
-      padding: 10px;
+
+    /* Estilos base para todos los cards */
+    .card {
+      perspective: 1000px;
+      border-radius: 20px;
       width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
+      max-width: 400px;
+      aspect-ratio: 1 / 0.70;
+      margin: 0 auto;
+      overflow: hidden;
     }
-    button {
-      background: #33B8B3;
-      color: white;
-      padding: 10px;
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      border-radius: 20px;
+    }
+    .card:hover .card-inner,
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Caras de las tarjetas */
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .card-front {
+      background: #f2e3d0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+    }
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; 
+      border-radius: 20px;
+      flex-grow: 1;
+      background: #f2e3d0;
+    }
+    .card-front button {
+      background: #f2e3d0;
       border: none;
-      font-size: 16px;
-      border-radius: 5px;
+      color: #2e4639;
+      font-weight: bold;
+      padding: 8px 12px;
+      font-size: 1.5em;
+      border-radius: 0 0 20px 20px;
       cursor: pointer;
     }
-    button:hover {
-      background: #33B8B3;
+    .card-back {
+      background: #f2e3d0;
+      color: #2e4639;
+      transform: rotateY(180deg);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.5em;
+      height: 100%;
+      overflow-y: auto;
+      line-height: 1.4;
+    }
+
+    /* Tarjetas de Promociones (no giran y más altas) */
+    .promo-card .card-inner {
+      transform: none !important;
+      transition: none !important;
+    }
+    .promo-card {
+      aspect-ratio: 2 / 3;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+    .promo-card img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* WhatsApp botón flotante */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      font-size: 40px;
+      padding: 15px;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #1ebd5a;
+    }
+
+    /* Ajustes para pantallas más pequeñas */
+    @media screen and (max-width: 1024px) and (min-width: 769px) {
+      .cards-servicios .card {
+        max-width: 350px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .cards-servicios {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+      }
+      .cards-servicios .card {
+        max-width: 350px;
+        aspect-ratio: 1 / 0.9;
+      }
+      .cards-servicios .card-back {
+        font-size: 1em;
+        padding: 10px;
+      }
+      .cards-servicios .card-front button {
+        font-size: 1.3em;
+        padding: 6px 10px;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .cards-servicios .card-back {
+        font-size: 0.9em;
+      }
+      .cards-servicios .card-front button {
+        font-size: 1em;
+        padding: 5px 8px;
+      }
+    }
+
+    /* Footer y extras */
+    #contacto-ubicacion {
+      max-width: 1200px;
+      margin: auto;
+      background: transparent;
+      padding: 40px 20px;
+      border-radius: 10px;
+    }
+    .grid-contacto {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+    @media screen and (max-width: 768px) {
+      .grid-contacto {
+        grid-template-columns: 1fr;
+      }
     }
     iframe {
       width: 100%;
@@ -415,67 +265,16 @@ form label {
       margin-top: 40px;
       line-height: 1.2; 
     }
- 
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
   </style>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<script>
-document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
-  e.preventDefault(); // Evita que se redirija
-
-  const form = e.target;
-  const formData = new FormData(form);
-
-  fetch(form.action, {
-    method: form.method,
-    body: formData,
-    headers: {
-      'Accept': 'application/json'
-    }
-  }).then(response => {
-    if (response.ok) {
-      form.style.display = 'none'; // Oculta el formulario
-      document.getElementById('mensaje-exito').style.display = 'block'; // Muestra el mensaje
-    } else {
-      alert("Ocurrió un error. Intenta de nuevo.");
-    }
-  }).catch(error => {
-    alert("Ocurrió un error. Intenta de nuevo.");
-  });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const esCelular = window.matchMedia('(max-width: 768px)').matches;
-
-    if (esCelular) {
-      const cards = document.querySelectorAll('.card');
-
-      cards.forEach(card => {
-        card.addEventListener('click', () => {
-          if (!card.classList.contains('flipped')) {
-            card.classList.add('flipped');
-            setTimeout(() => {
-              card.classList.remove('flipped');
-            }, 3000); // 3 segundos
-          }
-        });
-      });
-    }
-  });
-
-</script>
-
 <body>
   <header>
   <div class="logo-container">
