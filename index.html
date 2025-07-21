@@ -244,7 +244,7 @@
 
 @media screen and (max-width: 768px) {
   .cards-servicios .card:not(.promo-card) {
-    aspect-ratio: 1 / .8; /* Más cuadradas (menos altas) */
+    aspect-ratio: 1 / .85; /* Más cuadradas (menos altas) */
     max-width: 95%;        /* No tan anchas */
     margin: 0 auto;        /* Centrar */
   }
@@ -278,7 +278,22 @@ card-front button {
 .card {
     aspect-ratio: 1 / 0.8; /* 🔹 Más espacio vertical */
   }
-
+.cards-servicios .card {
+  max-width: 400px;      /* Máximo ancho para que no sean enormes */
+  margin: 0 auto;        /* Centra las tarjetas */
+}
+@media screen and (min-width: 1024px) {
+  .cards-servicios {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 40px;           /* Espacio entre tarjetas */
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .cards-servicios .card {
+    max-width: 350px;    /* Más compactas */
+  }
+}
 @media screen and (max-width: 768px) {
   .cards-servicios .card-back {
     font-size: 1em;   /* Letras más pequeñas en móvil */
@@ -292,7 +307,7 @@ card-front button {
   }
 media screen and (max-width: 768px) {
   .cards-servicios .card-front button {
-    font-size: 1.2em; /* Reduce un poco */
+    font-size: 1.3em; /* Reduce un poco */
     padding: 6px 10px;
   }
 }
