@@ -265,7 +265,19 @@ card-front button {
 .card {
     aspect-ratio: 1 / 0.8; /* 🔹 Más espacio vertical */
   }
-}
+
+@media screen and (max-width: 768px) {
+  .cards-servicios .card-back {
+    font-size: 1em;   /* Letras más pequeñas en móvil */
+    padding: 10px;    /* Menos padding para que quepa mejor */
+    line-height: 1.3; /* Mejor legibilidad */
+  }
+
+@media screen and (max-width: 400px) {
+  .cards-servicios .card-back {
+    font-size: 0.9em;  /* Aún más pequeño en celulares chicos */
+  }
+///////////////
 
 main {
   max-width: 1200px;
@@ -503,8 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="card-inner">
         <div class="card-front">
           <img src="promo_dia_spa.jpg" alt="Día de Spa">
-          <button>Día de Spa</button>
-        </div>
+           </div>
         </div>
     </div>
 
@@ -513,7 +524,6 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="card-inner">
         <div class="card-front">
           <img src="promo_facial.jpg" alt="Facial 2x1">
-          <button>Facial 2x1</button>
         </div>
       </div>
     </div>
