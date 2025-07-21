@@ -51,17 +51,11 @@
       display: inline-block;
     } 
 
-   header, .logo-container, nav {
-     width: 100%;           /* Ocupa todo el ancho */
-     max-width: none;        /* Asegura que no se limite */
-     margin: 0;              /* Quita márgenes */
-     padding: 0;             /* Quita padding extra si no quieres espacio */
-     display: block;
-   }
-
     /* Sección principal */
     .seccion-relajacion {
       margin-top: 0;
+      margin: 0 auto;
+      max-width: 1200px; 
       background-image: url('spa-fondo.jpg');
       background-size: cover;
       background-position: center;
@@ -71,6 +65,7 @@
       text-align: center;
       color: white;
       position: relative;
+      box-sizing: border-box;
     }
     .seccion-relajacion h2 {
       color: white !important;
@@ -159,6 +154,9 @@
       text-align: center;
       font-size: 1.3em;
       overflow-y: auto;
+      overflow-x: hidden;       
+      word-wrap: break-word;   
+      box-sizing: border-box;
     }
     .card:hover .card-inner,
     .card.flipped .card-inner {
