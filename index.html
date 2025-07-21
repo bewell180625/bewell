@@ -242,6 +242,13 @@
     width: 100%;                      /* Que ocupen el ancho disponible */
   }
 
+@media screen and (max-width: 768px) {
+  .cards-servicios .card:not(.promo-card) {
+    aspect-ratio: 1 / 1.2; /* Más cuadradas (menos altas) */
+    max-width: 90%;        /* No tan anchas */
+    margin: 0 auto;        /* Centrar */
+  }
+
 .ubicacion iframe {
   width: 100%;
   height: 100%;
