@@ -51,6 +51,14 @@
       display: inline-block;
     } 
 
+   header, .logo-container, nav {
+     width: 100%;           /* Ocupa todo el ancho */
+     max-width: none;        /* Asegura que no se limite */
+     margin: 0;              /* Quita márgenes */
+     padding: 0;             /* Quita padding extra si no quieres espacio */
+     display: block;
+   }
+
     /* Sección principal */
     .seccion-relajacion {
       margin-top: 0;
@@ -310,6 +318,13 @@
       transform: scale(1.1);
       background-color: #1ebd5a;
     }
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
   </style>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -333,15 +348,40 @@
     </div>
   </section>
 
+<main>
   <!-- Servicios -->
   <section id="servicios">
     <h2 class="titulo-contenedor">Servicios</h2>
     <div class="cards-servicios">
       <!-- Cards (4) -->
-      <div class="card"><div class="card-inner"><div class="card-front"><img src="masaje.jpg"><button>Masaje de relajación</button></div><div class="card-back"><p>Ven y disfruta...</p></div></div></div>
-      <div class="card"><div class="card-inner"><div class="card-front"><img src="facial.jpg"><button>Tratamientos corporales</button></div><div class="card-back"><p>Contamos con las mejores técnicas...</p></div></div></div>
-      <div class="card"><div class="card-inner"><div class="card-front"><img src="limpieza.jpg"><button>Tratamientos faciales</button></div><div class="card-back"><p>En Bewell spa...</p></div></div></div>
-      <div class="card"><div class="card-inner"><div class="card-front"><img src="aromaterapia.jpg"><button>Armonización oro facial</button></div><div class="card-back"><p>Con los mejores productos...</p><ul><li>Botox</li><li>Rellenos</li><li>Hilos tensores</li><li>Bioestimuladores</li></ul></div></div></div>
+      <div class="card"><div class="card-inner"><div class="card-front"><img src="masaje.jpg"><button>Masaje de relajación</button>
+</div>
+<div class="card-back">
+<p>Ven y disfruta de la mejor experiencia relajante, donde reduciras el estres y tensión muscular, disminuyendo el dolor e inflamación, dando al cuerpo y a la mente un estado de bienestar y relajación.</p>
+</div>
+</div>
+</div>
+      <div class="card"><div class="card-inner"><div class="card-front"><img src="facial.jpg"><button>Tratamientos corporales</button></div><div class="card-back">
+<p>Contamos con las mejores técnicas de reducción, tonificación y moldeamiento corporal, donde después de conocer nuestros tratamientos, tu cuerpo lo agradecerá</p>
+</div>
+</div>
+</div>
+      <div class="card"><div class="card-inner"><div class="card-front"><img src="limpieza.jpg"><button>Tratamientos faciales</button></div><div class="card-back">
+<p>En Bewell spa contamos con las mejores y avanzadas tecnicas para limpieza facial, tratamientos de acne, peling quimico. Donde disfrutaras de una sensación de bienestar y apariencia para tu piel.</p>
+</div>
+</div>
+</div>
+      <div class="card"><div class="card-inner"><div class="card-front"><img src="aromaterapia.jpg"><button>Armonización oro facial</button></div><div class="card-back">
+<p>Con los mejores productos de Colombia para México:</p>
+<ul>
+  <li>Botox</li>
+  <li>Rellenos faciales</li>
+  <li>Hilos tensores</li>
+  <li>Bioestimuladores</li>
+</ul>
+</div>
+</div>
+</div>
     </div>
   </section>
 
@@ -394,7 +434,7 @@
     </div>
   </div>
 </section>
-
+</main>
 
   <!-- Footer -->
   <footer>
