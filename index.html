@@ -104,9 +104,10 @@
     .cards-servicios {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      gap: 35px;
       padding: 30px 0;
-     justify-items: center; /* centra los cards */
+     justify-content: center;   /* centra la fila completa */
+     justify-items: center;     /* centra cada card */
     }
     .card {
       perspective: 1000px;
@@ -296,6 +297,11 @@
         max-width: 300px;
       }
     }
+@media screen and (max-width: 1024px) {
+  .cards-servicios {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+  }
+}
     @media screen and (max-width: 400px) {
       .cards-servicios .card-back {
         font-size: 0.9em;
