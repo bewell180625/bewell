@@ -109,9 +109,18 @@
     justify-items: center; /* centra las tarjetas en su celda */
    }
   .cards-servicios > .card {
-    max-width: 300px; /* para que no se estiren demasiado */
+    max-width: 350px; /* para que no se estiren demasiado */
     width: 100%;
    }
+/* Card 4 ocupa columnas 1 y 2 */
+.cards-servicios > .card:nth-child(4) {
+  grid-column: 1 / span 2;
+}
+
+/* Card 5 ocupa columnas 2 y 3 */
+.cards-servicios > .card:nth-child(5) {
+  grid-column: 2 / span 2;
+}
     .card {
       perspective: 1000px;
       border-radius: 20px;
