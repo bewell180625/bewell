@@ -102,15 +102,14 @@
 
     /* Tarjetas de servicios */
     .cards-servicios {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
-      padding: 30px 0;
-     justify-content: center;   /* centra la fila completa */
-     justify-items: center;     /* centra cada card */
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* siempre 3 columnas */
+    gap: 30px;
+    padding: 30px 0;
+    justify-items: center; /* centra las tarjetas en su celda */
+   }
   .cards-servicios > .card {
-    max-width: 350px; /* para que no se estiren demasiado */
+    max-width: 300px; /* para que no se estiren demasiado */
     width: 100%;
    }
     .card {
