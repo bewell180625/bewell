@@ -224,7 +224,7 @@
         grid-template-columns: repeat(2, 1fr);
       }
       
-      /* En tablet, resetear posicionamiento de cards 4 y 5 */
+      /* En tablet, resetear posicionamiento de cards 4 */
       .cards-servicios > .card:nth-child(4),
       .cards-servicios > .card:nth-child(5) {
         grid-column: auto;
@@ -232,6 +232,16 @@
         margin-right: 0;
         justify-self: center;
       }
+/* Card 5 centrado entre las dos columnas */
+      .cards-servicios > .card:nth-child(5) {
+        grid-column: 1 / -1; /* Ocupa ambas columnas */
+        grid-row: auto;
+        margin-left: 0;
+        margin-right: 0;
+        justify-self: center;
+        max-width: 350px; /* Mantiene el tamaño normal del card */
+      }
+
     }
 
     @media screen and (max-width: 768px) {
