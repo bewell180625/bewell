@@ -661,8 +661,16 @@
     const track = document.querySelector('.carousel-track');
     const indicators = document.querySelectorAll('.indicator');
     
+    // Carrusel automático
+    let currentSlide = 0;
+    const totalSlides = 3; // Número de posiciones del carrusel
+    const track = document.querySelector('.carousel-track');
+    const indicators = document.querySelectorAll('.indicator');
+    
     function updateCarousel() {
-      track.style.transform = `translateX(calc(${currentSlide} * (-50% - 15px)))`;
+      // Calcular el desplazamiento: cada slide mueve el ancho de una tarjeta + gap
+      const slideWidth = currentSlide * (50 + 2.5); // 50% del ancho + la mitad del gap (30px = 2.5%)
+      track.style.transform = `translateX(-${slideWidth}%)`;
       
       // Actualizar indicadores
       indicators.forEach((indicator, index) => {
@@ -685,7 +693,6 @@
         updateCarousel();
       });
     });
-
 
 
 
