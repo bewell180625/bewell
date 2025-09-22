@@ -663,7 +663,7 @@
     
     function updateCarousel() {
       // Calcular el desplazamiento: cada slide mueve el ancho de una tarjeta + gap
-      const slideWidth = currentSlide * (50 + 1); // 50% del ancho + la mitad del gap (30px = 2.5%)
+      const slideWidth = currentSlide * (50 + 2.5); // 50% del ancho + la mitad del gap (30px = 2.5%)
       track.style.transform = `translateX(-${slideWidth}%)`;
       
 
