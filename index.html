@@ -135,7 +135,7 @@
       perspective: 1000px;
       border-radius: 20px;
       width: 100%;
-      aspect-ratio: 1 / 0.80;
+      aspect-ratio: 1 / 0.78;
       overflow: hidden;
       max-width: 450px;
       margin: 0 auto;
@@ -538,11 +538,21 @@
   <!-- Promociones -->
   <section id="promociones">
     <h2 class="titulo-contenedor">Promociones</h2>
-    <div class="cards-servicios">
-      <div class="card promo-card"><div class="card-inner"><div class="card-front"><img src="promo_dia_spa.jpg"></div></div></div>
-      <div class="card promo-card"><div class="card-inner"><div class="card-front"><img src="promo_facial.jpg"></div></div></div>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="card promo-card"><div class="card-inner"><div class="card-front"><img src="promo_dia_spa.jpg"></div></div></div>
+        <div class="card promo-card"><div class="card-inner"><div class="card-front"><img src="promo_facial.jpg"></div></div></div>
+        <div class="card promo-card"><div class="card-inner"><div class="card-front"><img src="promo_botox.jpeg"></div></div></div>
+        <div class="card promo-card"><div class="card-inner"><div class="card-front"><img src="promo_reductor.jpeg"></div></div></div>
+      </div>
+      <div class="carousel-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
     </div>
   </section>
+
 
   <!-- Contacto -->
   <section id="contacto">
@@ -590,7 +600,43 @@
 
   <a href="https://wa.me/5215551731036" class="whatsapp-float" target="_blank" title="Enviar mensaje por WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
+
   <script>
+
+// Carrusel automático
+    let currentSlide = 0;
+    const totalSlides = 3; // Número de posiciones del carrusel
+    const track = document.querySelector('.carousel-track');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    function updateCarousel() {
+      track.style.transform = `translateX(calc(${currentSlide} * (-50% - 15px)))`;
+      
+      // Actualizar indicadores
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlide);
+      });
+    }
+    
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    }
+    
+    // Auto-avance cada 4 segundos
+    setInterval(nextSlide, 4000);
+    
+    // Click en indicadores
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        currentSlide = index;
+        updateCarousel();
+      });
+    });
+
+
+
+
     document.querySelector('form').addEventListener('submit', function(e) {
       e.preventDefault();
       const form = e.target;
