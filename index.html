@@ -201,7 +201,7 @@
       transform: rotateY(180deg);
     }
 
-     /* Carrusel de promociones */
+      /* Carrusel de promociones */
     .carousel-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -228,7 +228,7 @@
       margin-top: 20px;
     }
 
-   .indicator {
+    .indicator {
       width: 12px;
       height: 12px;
       border-radius: 50%;
@@ -656,22 +656,27 @@
   <script>
 
 // Carrusel automático
+const cards = document.querySelectorAll('.carousel-track .card');
     let currentSlide = 0;
-    const totalSlides = 3; // Número de posiciones del carrusel
+    const totalSlides = cards.length;
+ // Número de posiciones del carrusel
     const track = document.querySelector('.carousel-track');
     const indicators = document.querySelectorAll('.indicator');
     
     function updateCarousel() {
-      // Calcular el desplazamiento: cada slide mueve el ancho de una tarjeta + gap
-      const slideWidth = currentSlide * (50 + 2.5); // 50% del ancho + la mitad del gap (30px = 2.5%)
-      track.style.transform = `translateX(-${slideWidth}%)`;
-      
-      
-      // Actualizar indicadores
-      indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentSlide);
-      });
-    }
+  // Calcular el ancho de una tarjeta
+  const card = track.querySelector('.card');
+  const cardWidth = card.offsetWidth;
+  const gap = 30; // el mismo gap que en CSS
+  const offset = currentSlide * (cardWidth + gap);
+
+  track.style.transform = `translateX(-${offset}px)`;
+
+  // Actualizar indicadores
+  indicators.forEach((indicator, index) => {
+    indicator.classList.toggle('active', index === currentSlide);
+  });
+}
     
     function nextSlide() {
       currentSlide = (currentSlide + 1) % totalSlides;
